@@ -27,6 +27,17 @@ export class App extends Component {
       number: e.number,
     }
 
+    const { name, number } = contact;
+    if (name === "") {
+      alert("Name field is empty")
+      return
+    }
+
+    if (number === "") {
+      alert("Number field is empty")
+      return
+    }
+
     const temp = this.state.contacts.filter(temp2 => temp2.name === contact.name);
 
     if (temp.length !== 0) {
